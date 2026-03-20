@@ -1,0 +1,252 @@
+import type { Product } from '~/types';
+import { R2_BASE_URL } from './constants';
+
+// Shared care instructions
+const careInstructions = [
+  'Lavar a mano con agua fría y jabón suave',
+  'No usar blanqueador ni detergentes fuertes',
+  'Secar a la sombra, evitar exposición directa al sol prolongada',
+  'No retorcer; escurrir con cuidado',
+  'Guardar en lugar seco y ventilado cuando no esté en uso',
+  'Revisar periódicamente los puntos de amarre',
+];
+
+export const products: Product[] = [
+  {
+    id: 'chinchorro-30',
+    slug: 'chinchorro-decorado-verde-con-rombos',
+    name: 'Chinchorro Decorado Verde con Rombos',
+    description: 'Chinchorro con tejido decorado de 1000 vueltas, una pieza que combina arte y funcionalidad. Los patrones decorativos son tejidos directamente en la trama, creando diseños únicos que reflejan la creatividad de nuestros artesanos. Fabricado con materiales de alta calidad, cada chinchorro es tejido completamente a mano por artesanos del Casanare. Fresco y confortable, ideal para climas cálidos o tropicales.',
+    shortDescription: 'Elegante chinchorro decorado con patrón de rombos en tonos verdes. Tejido artesanal de 1000 vueltas.',
+    price: 780000,
+    dimensions: { largo: 430, ancho: 180 },
+    weight: 3,
+    maxWeight: 200,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'decorado',
+    vueltas: 1000,
+    images: [
+      { id: 'img-30-0', url: `${R2_BASE_URL}/products/nid-30/0-VERDE_CON_ROMBOS_-1.jpg.webp`, alt: 'Chinchorro Decorado Verde - Vista 1', width: 800, height: 600 },
+      { id: 'img-30-1', url: `${R2_BASE_URL}/products/nid-30/1-VERDE_CON_ROMBOS_-4.jpg.webp`, alt: 'Chinchorro Decorado Verde - Vista 2', width: 800, height: 600 },
+      { id: 'img-30-2', url: `${R2_BASE_URL}/products/nid-30/2-VERDE_CON_ROMBOS_-2.jpg.webp`, alt: 'Chinchorro Decorado Verde - Vista 3', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Verde', colorHex: '#22c55e', available: true }],
+    decoraciones: 'Rombos',
+    fabricationDays: 20,
+    category: 'grande',
+    featured: true,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+  {
+    id: 'chinchorro-29',
+    slug: 'chinchorro-campechana-azul',
+    name: 'Chinchorro Campechana Azul',
+    description: 'Chinchorro con tejido campechana de 1000 vueltas, reconocido por su patrón entrelazado que ofrece una textura única al tacto. La técnica campechana es una de las más valoradas del tejido llanero por su belleza y resistencia. Cada pieza es tejida completamente a mano por artesanos del Casanare.',
+    shortDescription: 'Chinchorro campechana en tonos azules. 1000 vueltas de tejido artesanal.',
+    price: 900000,
+    dimensions: { largo: 430, ancho: 180 },
+    weight: 3,
+    maxWeight: 200,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'campechana',
+    vueltas: 1000,
+    images: [
+      { id: 'img-29-0', url: `${R2_BASE_URL}/products/nid-29/0-CAMPECHANA_AZUL_-_3.jpg.webp`, alt: 'Chinchorro Campechana Azul - Vista 1', width: 800, height: 600 },
+      { id: 'img-29-1', url: `${R2_BASE_URL}/products/nid-29/1-CAMPECHANA_AZUL_-_2.jpg.webp`, alt: 'Chinchorro Campechana Azul - Vista 2', width: 800, height: 600 },
+      { id: 'img-29-2', url: `${R2_BASE_URL}/products/nid-29/2-CAMPECHANA_AZUL_-_4.jpg.webp`, alt: 'Chinchorro Campechana Azul - Vista 3', width: 800, height: 600 },
+      { id: 'img-29-3', url: `${R2_BASE_URL}/products/nid-29/3-AZUL_CON_FLORES_-3.jpg.webp`, alt: 'Chinchorro Campechana Azul - Vista 4', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Azul', colorHex: '#3b82f6', available: true }],
+    decoraciones: 'Ninguna',
+    fabricationDays: 20,
+    category: 'grande',
+    featured: false,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+  {
+    id: 'chinchorro-28',
+    slug: 'chinchorro-tradicional-franjas-naranja-azul',
+    name: 'Chinchorro Tradicional Franjas Naranja y Azul',
+    description: 'Chinchorro con tejido tradicional de 1000 vueltas, la expresión más auténtica del arte llanero. El tejido tradicional casanareño ha sido transmitido de generación en generación, y cada vuelta refleja siglos de sabiduría artesanal.',
+    shortDescription: 'Chinchorro tradicional con franjas vibrantes en naranja y azul. 1000 vueltas.',
+    price: 760000,
+    dimensions: { largo: 430, ancho: 180 },
+    weight: 3,
+    maxWeight: 200,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'tradicional',
+    vueltas: 1000,
+    images: [
+      { id: 'img-28-0', url: `${R2_BASE_URL}/products/nid-28/0-FRANJAS_NARANJA_Y_AZUL_-_6.jpg.webp`, alt: 'Chinchorro Franjas - Vista 1', width: 800, height: 600 },
+      { id: 'img-28-1', url: `${R2_BASE_URL}/products/nid-28/1-FRANJAS_NARANJA_Y_AZUL_-_1.jpg.webp`, alt: 'Chinchorro Franjas - Vista 2', width: 800, height: 600 },
+      { id: 'img-28-2', url: `${R2_BASE_URL}/products/nid-28/2-FRANJAS_NARANJA_Y_AZUL_-_5.jpg.webp`, alt: 'Chinchorro Franjas - Vista 3', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Multicolor', colorHex: '#8B5CF6', available: true }],
+    decoraciones: 'Franjas',
+    fabricationDays: 20,
+    category: 'grande',
+    featured: true,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+  {
+    id: 'chinchorro-24',
+    slug: 'chinchorro-tradicional-grande-premium',
+    name: 'Chinchorro Tradicional Grande Premium',
+    description: 'Chinchorro con tejido tradicional de 1000 vueltas, la expresión más auténtica del arte llanero. El tejido tradicional casanareño ha sido transmitido de generación en generación, y cada vuelta refleja siglos de sabiduría artesanal. Fresco, confortable y duradero.',
+    shortDescription: 'Chinchorro tradicional premium de 1000 vueltas. Máxima calidad artesanal del Casanare.',
+    price: 1050000,
+    dimensions: { largo: 430, ancho: 180 },
+    weight: 3.2,
+    maxWeight: 200,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'tradicional',
+    vueltas: 1000,
+    images: [
+      { id: 'img-24-0', url: `${R2_BASE_URL}/products/nid-24/0-Chinchorro-1.jpg.webp`, alt: 'Chinchorro Premium - Vista 1', width: 800, height: 600 },
+      { id: 'img-24-1', url: `${R2_BASE_URL}/products/nid-24/1-Chinchorro-2.jpg.webp`, alt: 'Chinchorro Premium - Vista 2', width: 800, height: 600 },
+      { id: 'img-24-2', url: `${R2_BASE_URL}/products/nid-24/2-Chinchorro-3.jpg.webp`, alt: 'Chinchorro Premium - Vista 3', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Multicolor', colorHex: '#8B5CF6', available: true }],
+    decoraciones: 'Ninguna',
+    fabricationDays: 20,
+    category: 'grande',
+    featured: true,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+  {
+    id: 'chinchorro-22',
+    slug: 'chinchorro-tradicional-personal-clasico',
+    name: 'Chinchorro Tradicional Personal Clásico',
+    description: 'Chinchorro con tejido tradicional de 800 vueltas, la expresión más auténtica del arte llanero. El tejido tradicional casanareño ha sido transmitido de generación en generación. Fresco, confortable y duradero.',
+    shortDescription: 'Chinchorro tradicional clásico tamaño personal. 800 vueltas de tejido a mano.',
+    price: 620000,
+    dimensions: { largo: 420, ancho: 170 },
+    weight: 2.5,
+    maxWeight: 150,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'tradicional',
+    vueltas: 800,
+    images: [
+      { id: 'img-22-0', url: `${R2_BASE_URL}/products/nid-22/0-WhatsApp_Image_2025-01-25_at_1.41.51_PM.jpeg.webp`, alt: 'Chinchorro Personal - Vista 1', width: 800, height: 600 },
+      { id: 'img-22-1', url: `${R2_BASE_URL}/products/nid-22/1-WhatsApp_Image_2025-01-25_at_1.42.21_PM.jpeg.webp`, alt: 'Chinchorro Personal - Vista 2', width: 800, height: 600 },
+      { id: 'img-22-2', url: `${R2_BASE_URL}/products/nid-22/2-WhatsApp_Image_2025-01-25_at_1.42.26_PM.jpeg.webp`, alt: 'Chinchorro Personal - Vista 3', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Multicolor', colorHex: '#8B5CF6', available: true }],
+    decoraciones: 'Ninguna',
+    fabricationDays: 20,
+    category: 'personal',
+    featured: false,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+  {
+    id: 'chinchorro-17',
+    slug: 'chinchorro-tradicional-mediano',
+    name: 'Chinchorro Tradicional Mediano',
+    description: 'Chinchorro con tejido tradicional de 700 vueltas, la expresión más auténtica del arte llanero. El tejido tradicional casanareño ha sido transmitido de generación en generación. Fresco, confortable y duradero.',
+    shortDescription: 'Chinchorro tradicional mediano compacto. 700 vueltas de arte llanero.',
+    price: 550000,
+    dimensions: { largo: 400, ancho: 150 },
+    weight: 2,
+    maxWeight: 120,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'tradicional',
+    vueltas: 700,
+    images: [
+      { id: 'img-17-0', url: `${R2_BASE_URL}/products/nid-17/0-chinchorro-1_9.jpg.webp`, alt: 'Chinchorro Mediano - Vista 1', width: 800, height: 600 },
+      { id: 'img-17-1', url: `${R2_BASE_URL}/products/nid-17/1-chinchorro-2_8.jpg.webp`, alt: 'Chinchorro Mediano - Vista 2', width: 800, height: 600 },
+      { id: 'img-17-2', url: `${R2_BASE_URL}/products/nid-17/2-chinchorro-3_8.jpg.webp`, alt: 'Chinchorro Mediano - Vista 3', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Multicolor', colorHex: '#8B5CF6', available: true }],
+    decoraciones: 'Ninguna',
+    fabricationDays: 20,
+    category: 'mediano',
+    featured: false,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+  {
+    id: 'chinchorro-18',
+    slug: 'chinchorro-tigre-personal',
+    name: 'Chinchorro Tigre Personal',
+    description: 'Chinchorro con tejido tigre de 800 vueltas, un diseño audaz con personalidad única. La técnica tigre crea un patrón distintivo que combina tradición y modernidad. Tejido completamente a mano por artesanos del Casanare.',
+    shortDescription: 'Chinchorro con diseño tigre audaz. 800 vueltas de tejido artesanal.',
+    price: 620000,
+    dimensions: { largo: 420, ancho: 170 },
+    weight: 2.5,
+    maxWeight: 150,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'tigre',
+    vueltas: 800,
+    images: [
+      { id: 'img-18-0', url: `${R2_BASE_URL}/products/nid-18/0-WhatsApp_Image_2025-01-25_at_1.44.01_PM__1_.jpeg.webp`, alt: 'Chinchorro Tigre - Vista 1', width: 800, height: 600 },
+      { id: 'img-18-1', url: `${R2_BASE_URL}/products/nid-18/1-WhatsApp_Image_2025-01-25_at_1.43.51_PM__1_.jpeg.webp`, alt: 'Chinchorro Tigre - Vista 2', width: 800, height: 600 },
+      { id: 'img-18-2', url: `${R2_BASE_URL}/products/nid-18/2-WhatsApp_Image_2025-01-25_at_1.44.01_PM.jpeg.webp`, alt: 'Chinchorro Tigre - Vista 3', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Multicolor', colorHex: '#8B5CF6', available: true }],
+    decoraciones: 'Ninguna',
+    fabricationDays: 20,
+    category: 'personal',
+    featured: true,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+  {
+    id: 'chinchorro-15',
+    slug: 'chinchorro-personalizado-con-nombres',
+    name: 'Chinchorro Personalizado con Nombres',
+    description: 'Chinchorro personalizado con tejido de 800 vueltas, donde puedes incluir nombres o mensajes especiales. Una pieza única creada especialmente para ti. El regalo perfecto para ocasiones especiales.',
+    shortDescription: 'Chinchorro personalizado con nombres tejidos a mano. 800 vueltas de arte único.',
+    price: 620000,
+    dimensions: { largo: 420, ancho: 170 },
+    weight: 2.5,
+    maxWeight: 150,
+    material: 'Nylon de alta resistencia',
+    weaveType: 'personalizado',
+    vueltas: 800,
+    images: [
+      { id: 'img-15-0', url: `${R2_BASE_URL}/products/nid-15/0-WhatsApp_Image_2025-01-25_at_1.43.33_PM.jpeg.webp`, alt: 'Chinchorro Personalizado - Vista 1', width: 800, height: 600 },
+      { id: 'img-15-1', url: `${R2_BASE_URL}/products/nid-15/1-llano.jpg.webp`, alt: 'Chinchorro Personalizado - Vista 2', width: 800, height: 600 },
+      { id: 'img-15-2', url: `${R2_BASE_URL}/products/nid-15/2-WhatsApp_Image_2025-01-25_at_1.43.48_PM.jpeg.webp`, alt: 'Chinchorro Personalizado - Vista 3', width: 800, height: 600 },
+    ],
+    variants: [{ color: 'Personalizado', colorHex: '#ec4899', available: true }],
+    decoraciones: 'Nombres',
+    fabricationDays: 25,
+    category: 'personal',
+    featured: true,
+    createdAt: '2024-12-01T08:00:00Z',
+    updatedAt: '2025-01-25T08:00:00Z',
+  },
+];
+
+// Helper functions
+export function getFeaturedProducts(): Product[] {
+  return products.filter((p) => p.featured);
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter((p) => p.category === category);
+}
+
+export function getProductsByWeaveType(weaveType: string): Product[] {
+  return products.filter((p) => p.weaveType === weaveType);
+}
+
+export function formatPrice(price: number): string {
+  return new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(price);
+}
+
+export { careInstructions };

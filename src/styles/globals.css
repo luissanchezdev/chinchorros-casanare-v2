@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+/* Design System: Artesanal-Luxe Editorial */
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Custom Theme */
+@theme {
+  /* Paleta de colores artesanal */
+  --color-surface: #fbf9f5;
+  --color-surface-low: #f5f3ef;
+  --color-surface-high: #eae8e4;
+  --color-surface-highest: #e4e2de;
+
+  --color-primary: #803d0a;
+  --color-primary-light: #9e5421;
+  --color-primary-dark: #5a2a07;
+
+  --color-secondary: #47664b;
+  --color-secondary-light: #5a7f5e;
+
+  --color-tertiary: #735c00;
+  --color-tertiary-light: #9a7b00;
+
+  --color-accent: #D4AF37;
+
+  --color-text: #1b1c1a;
+  --color-text-muted: #54433c;
+  --color-text-light: #87736b;
+
+  --color-border: #dac1b8;
+  --color-border-light: rgba(218, 193, 184, 0.3);
+
+  /* Tipografía */
+  --font-display: 'Noto Serif', serif;
+  --font-body: 'Manrope', sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography utilities */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary button gradient */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(128, 61, 10, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(128, 61, 10, 0.35);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Card styles - Tonal layering, no shadows */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* No borders rule - use tonal shifts */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  opacity: 0.5;
+}
+
+/* Glassmorphism for navigation */
+.glass {
+  background: rgba(251, 249, 245, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* Image styles */
+.product-image {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-low);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-light);
+}
