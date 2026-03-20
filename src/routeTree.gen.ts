@@ -9,6 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PoliticasRouteImport } from './routes/politicas'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as CotizacionesRouteImport } from './routes/cotizaciones'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as ColeccionesRouteImport } from './routes/colecciones'
@@ -16,6 +18,16 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as TiendaIndexRouteImport } from './routes/tienda/index'
 import { Route as TiendaSlugRouteImport } from './routes/tienda/$slug'
 
+const PoliticasRoute = PoliticasRouteImport.update({
+  id: '/politicas',
+  path: '/politicas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CotizacionesRoute = CotizacionesRouteImport.update({
   id: '/cotizaciones',
   path: '/cotizaciones',
@@ -52,6 +64,8 @@ export interface FileRoutesByFullPath {
   '/colecciones': typeof ColeccionesRoute
   '/contacto': typeof ContactoRoute
   '/cotizaciones': typeof CotizacionesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/politicas': typeof PoliticasRoute
   '/tienda/$slug': typeof TiendaSlugRoute
   '/tienda/': typeof TiendaIndexRoute
 }
@@ -60,6 +74,8 @@ export interface FileRoutesByTo {
   '/colecciones': typeof ColeccionesRoute
   '/contacto': typeof ContactoRoute
   '/cotizaciones': typeof CotizacionesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/politicas': typeof PoliticasRoute
   '/tienda/$slug': typeof TiendaSlugRoute
   '/tienda': typeof TiendaIndexRoute
 }
@@ -69,6 +85,8 @@ export interface FileRoutesById {
   '/colecciones': typeof ColeccionesRoute
   '/contacto': typeof ContactoRoute
   '/cotizaciones': typeof CotizacionesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/politicas': typeof PoliticasRoute
   '/tienda/$slug': typeof TiendaSlugRoute
   '/tienda/': typeof TiendaIndexRoute
 }
@@ -79,6 +97,8 @@ export interface FileRouteTypes {
     | '/colecciones'
     | '/contacto'
     | '/cotizaciones'
+    | '/nosotros'
+    | '/politicas'
     | '/tienda/$slug'
     | '/tienda/'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +107,8 @@ export interface FileRouteTypes {
     | '/colecciones'
     | '/contacto'
     | '/cotizaciones'
+    | '/nosotros'
+    | '/politicas'
     | '/tienda/$slug'
     | '/tienda'
   id:
@@ -95,6 +117,8 @@ export interface FileRouteTypes {
     | '/colecciones'
     | '/contacto'
     | '/cotizaciones'
+    | '/nosotros'
+    | '/politicas'
     | '/tienda/$slug'
     | '/tienda/'
   fileRoutesById: FileRoutesById
@@ -104,12 +128,28 @@ export interface RootRouteChildren {
   ColeccionesRoute: typeof ColeccionesRoute
   ContactoRoute: typeof ContactoRoute
   CotizacionesRoute: typeof CotizacionesRoute
+  NosotrosRoute: typeof NosotrosRoute
+  PoliticasRoute: typeof PoliticasRoute
   TiendaSlugRoute: typeof TiendaSlugRoute
   TiendaIndexRoute: typeof TiendaIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/politicas': {
+      id: '/politicas'
+      path: '/politicas'
+      fullPath: '/politicas'
+      preLoaderRoute: typeof PoliticasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cotizaciones': {
       id: '/cotizaciones'
       path: '/cotizaciones'
@@ -160,6 +200,8 @@ const rootRouteChildren: RootRouteChildren = {
   ColeccionesRoute: ColeccionesRoute,
   ContactoRoute: ContactoRoute,
   CotizacionesRoute: CotizacionesRoute,
+  NosotrosRoute: NosotrosRoute,
+  PoliticasRoute: PoliticasRoute,
   TiendaSlugRoute: TiendaSlugRoute,
   TiendaIndexRoute: TiendaIndexRoute,
 }
